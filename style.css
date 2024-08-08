@@ -31,10 +31,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* border: 2px solid black; */
 }
 
 .header-logo-img {
-  height: 7.4rem;
+  height: 100%;
 }
 
 .toggle-btn {
@@ -60,7 +61,7 @@ body {
 }
 
 .active {
-  height: 300px;
+  height: 40vh;
   visibility: visible;
 }
 
@@ -75,11 +76,12 @@ body {
 
 .nav-links li {
   list-style-type: none;
+  padding-left: 20px;
 }
 
 .nav-links li a {
   font-size: 1.3rem;
-  padding: 0px 1rem;
+  padding: 0px 0.5rem;
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 2px;
@@ -94,10 +96,9 @@ body {
 
   .nav-links-container {
     position: static;
-    height: auto;
     visibility: visible;
     height: auto;
-    width: 50%;
+    width: auto;
     background-color: transparent;
   }
 
@@ -107,10 +108,14 @@ body {
     width: auto;
     flex-direction: row;
   }
+
+  .nav-links li {
+    padding-left: 0px;
+  }
 }
 
 .banner {
-  height: 100vh;
+  height: 80dvh;
   width: 100%;
   background-image: url('./images/banner-img.jpg');
   background-position: 100%;
@@ -134,7 +139,7 @@ body {
 
 .banner-content {
   min-height: auto;
-  width: auto;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,16 +160,26 @@ body {
 .soon {
   background-color: var(--secondary-color);
   text-align: center;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.soon-service-img {
+  height: 50vh;
+  width: 80%;
+  object-fit: contain;
+  /* background-color: yellowgreen; */
 }
 
 .soon h2 {
-  font-size: 3rem;
+  margin-top: 1rem;
+  font-size: 2.7rem;
   letter-spacing: 3px;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-weight: 400;
 }
 
 marquee {
@@ -174,5 +189,9 @@ marquee {
 @media screen and (min-width: 800px) {
   .logo {
     font-size: 22rem;
+  }
+
+  .soon-service-img {
+    width: 40%;
   }
 }
