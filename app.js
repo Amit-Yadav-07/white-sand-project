@@ -4,4 +4,3 @@ toggleBtn.addEventListener('click', () => {
     NavLinkContainer.classList.toggle('active')
 
 })
-

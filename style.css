@@ -16,7 +16,6 @@ body {
 
 .navbar {
   height: 5rem;
-  /* border: 2px solid black; */
   width: 100%;
   position: sticky;
   top: 0;
@@ -139,6 +138,7 @@ body {
 
 .banner-content {
   min-height: auto;
+
   width: 70%;
   display: flex;
   align-items: center;
@@ -160,30 +160,34 @@ body {
 .soon {
   background-color: var(--secondary-color);
   text-align: center;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  min-height: 400px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
 }
 
 .soon-service-img {
-  height: 50vh;
+  height: 100%;
   width: 80%;
-  object-fit: contain;
-  /* background-color: yellowgreen; */
+  /* object-fit: contain; */
+  margin: 2rem 0px;
 }
 
-.soon h2 {
-  margin-top: 1rem;
+h2 {
+  margin: 1rem 0px;
+  text-align: center;
   font-size: 2.7rem;
   letter-spacing: 3px;
   text-transform: capitalize;
   font-weight: 400;
 }
 
-marquee {
-  font-size: 1.5rem;
+address {
+  color: #000;
+  font-size: 1.2rem;
+  margin: 2rem 0px;
+  width: 90%;
 }
 
 @media screen and (min-width: 800px) {
@@ -192,6 +196,15 @@ marquee {
   }
 
   .soon-service-img {
-    width: 40%;
+    width: 70%;
+  }
+
+  .soon {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  address {
+    margin: 0px;
+    width: 100%;
   }
 }
